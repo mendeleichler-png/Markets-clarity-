@@ -103,3 +103,10 @@ All times America/New_York. This page is updated at every stage change.
   blocks, so allocated disk bytes will not grow until the download
   passes the ~2.0 GB high-water mark. Monitoring until the model
   registers in the server.
+- **2026-11-15 ~16:02 EST** — INTERVENTION (infrastructure): a runtime
+  restart killed the Ollama server and the pull loop at 60%
+  downloaded (2.8 GB) — the same failure that hit at 14:05. Recovery:
+  restarted the server with the lane environment (models dir + port
+  11434) and restarted the identical 10-attempt pull loop. The
+  download resumed from the on-disk partial at 61% (2.9 GB), still
+  ~2.5 MB/s. No data lost beyond the interruption itself.
