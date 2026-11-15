@@ -29,9 +29,9 @@ All times America/New_York. This page is updated at every stage change.
 
 ## Stage checklist
 
-- [ ] **Setup** — UNBLOCKED 15:40 EST (owner freed ~10 GB); model
-      download resumed 15:47 EST and is in progress; smoke test pending
-- [ ] **Research** — pending
+- [x] **Setup** — DONE 16:19 EST: model pulled, `mc-qwen` created,
+      smoke test passed
+- [ ] **Research** — in progress (crew launched 16:2x EST)
 - [ ] **Script** — pending
 - [ ] **Reviews** — pending (10-pass protocol; fact pass and clarity pass run
       as separate veto-holding steps)
@@ -110,3 +110,14 @@ All times America/New_York. This page is updated at every stage change.
   11434) and restarted the identical 10-attempt pull loop. The
   download resumed from the on-disk partial at 61% (2.9 GB), still
   ~2.5 MB/s. No data lost beyond the interruption itself.
+- **2026-11-15 16:16 EST** — MODEL DOWNLOAD COMPLETE: "PULL OK" in
+  the loop log; `qwen2.5:7b-instruct-q4_K_M` registered in the server
+  (4,683,087,332 bytes, SHA-256 verified by Ollama).
+- **2026-11-15 ~16:19 EST** — `ollama create mc-qwen` succeeded
+  (Modelfile: FROM qwen2.5:7b-instruct-q4_K_M, num_ctx 8192). SMOKE
+  TEST PASSED: one short generation via the API answered in ~80 s
+  including model load. Honest note: the smoke answer itself was
+  factually wrong from the model's memory (it called Jerry Selbee a
+  football player) — which is exactly why this crew design forbids
+  relying on model memory: the Researcher must verify every fact
+  from the web and the fact pass holds a veto. **Setup stage DONE.**
