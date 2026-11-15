@@ -55,3 +55,12 @@ All times America/New_York. This page is updated at every stage change.
   running in parallel). CrewAI installed; one dependency (litellm) was
   missing from its default install and is being added now. Setup stage
   stays open until the model is pulled and a smoke test passes.
+- **2026-11-15 13:52 EST** — Lane handed to a fresh coordinator; the full
+  state was re-verified on disk (crew code, image assets, venv all intact).
+- **2026-11-15 13:58 EST** — CrewAI blocker found and fixed: this host's
+  NO_PROXY setting contains bracketed IPv6 entries that crash CrewAI's
+  LLM client ("Invalid port") before any model call can happen. The
+  lane's crew script now sanitizes that setting at startup. litellm
+  1.109.1 finished installing. Model download ~40% — the shared
+  connection runs ~1.3 MB/s, so roughly 35–40 more minutes. Setup stays
+  open until the model lands and a smoke test passes.
