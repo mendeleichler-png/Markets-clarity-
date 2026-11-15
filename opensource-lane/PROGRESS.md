@@ -64,3 +64,7 @@ All times America/New_York. This page is updated at every stage change.
   1.109.1 finished installing. Model download ~40% — the shared
   connection runs ~1.3 MB/s, so roughly 35–40 more minutes. Setup stays
   open until the model lands and a smoke test passes.
+- **2026-11-15 14:05 EST** — Stall, logged honestly: the host machine
+  restarted and killed both the Ollama server and the download at 35%
+  (1.6 GB of 4.7 GB). Both were restarted and the download resumed from
+  the partial file — nothing lost but time (~40 min at current speed).
