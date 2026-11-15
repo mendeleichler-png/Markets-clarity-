@@ -29,7 +29,8 @@ All times America/New_York. This page is updated at every stage change.
 
 ## Stage checklist
 
-- [ ] **Setup** — in progress (details below)
+- [ ] **Setup** — BLOCKED on disk space (details below; everything else
+      in setup is done — framework, crew code, tools, assets all ready)
 - [ ] **Research** — pending
 - [ ] **Script** — pending
 - [ ] **Reviews** — pending (10-pass protocol; fact pass and clarity pass run
@@ -68,3 +69,17 @@ All times America/New_York. This page is updated at every stage change.
   restarted and killed both the Ollama server and the download at 35%
   (1.6 GB of 4.7 GB). Both were restarted and the download resumed from
   the partial file — nothing lost but time (~40 min at current speed).
+- **2026-11-15 15:02 EST** — Setup is BLOCKED on disk space, and this is
+  the real reason behind the afternoon's "stalls." The home directory
+  is at its ~118 GB quota ceiling (measured: 118 GB used). Ollama's
+  server log shows the model download's writes failing with "disk
+  quota exceeded" from 14:45 EST; a direct write probe confirms only
+  ~0.3–0.5 GB of space can still be written. The model file is 2.0 GB
+  downloaded of 4.68 GB — it needs ~2.7 GB more. The space is held by
+  the channel's own video library (~81 GB in the financial-clarity
+  folder, ~42 GB of it Shorts), which the lane will not delete on its
+  own authority. Everything else is ready: CrewAI + litellm installed,
+  the CrewAI startup crash fixed, crew code complete, images verified,
+  Kokoro voice and QA gates in place. **To unblock: free ~3 GB anywhere
+  in the home directory (owner's call what goes), and the lane resumes
+  the download and runs the build with no other changes.**
