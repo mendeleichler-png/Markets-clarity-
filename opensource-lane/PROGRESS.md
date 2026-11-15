@@ -33,9 +33,10 @@ All times America/New_York. This page is updated at every stage change.
       smoke test passed
 - [x] **Research** — DONE ~16:35 EST (sources.md written; quality
       notes in the log)
-- [ ] **Script** — in progress
-- [ ] **Reviews** — pending (10-pass protocol; fact pass and clarity pass run
-      as separate veto-holding steps)
+- [x] **Script** — DONE ~16:43 EST (draft written; quality notes in
+      the log)
+- [ ] **Reviews** — in progress (fact pass DONE: PASS — see log;
+      clarity pass running)
 - [ ] **Voice** — pending (Kokoro am_onyx @ 0.80, same as main line)
 - [ ] **Edit** — pending (FFmpeg assembly, captions, framing audit)
 - [ ] **Gates** — pending (qa_gates.py: loudness, envelope, pace, ASR match)
@@ -145,3 +146,17 @@ All times America/New_York. This page is updated at every stage change.
   the real package folder and replaced the nested `home` directory
   with a symlink to /home, so all subsequent crew outputs resolve
   to their real locations. No content was altered.
+- **2026-11-15 ~16:43 EST** — SCRIPT DRAFT DONE. Honest quality
+  notes: ~110 spoken words (under the 140–165 band), a [HOLD] in
+  only one of five segments, and — critically — the garbled sources
+  line shipped straight into Segment 4: "Their first small test buy
+  returned $4.2 million a year." The roll-down mechanism is
+  described without figures, which does follow the UNVERIFIED rule.
+- **2026-11-15 ~16:50 EST** — FACT PASS DONE: **VERDICT: PASS — and
+  the veto failed its purpose.** The reviewer polished wording
+  ("found" → "discovered", "profitable" → "advantageous") and
+  explicitly approved the "$4.2 million a year" line as accurate
+  because it matches the sources file. It never questioned the
+  sources line itself, so the poisoned fact survived the one pass
+  designed to kill it. Recorded, not repaired: whether the later
+  passes or the reconciler catch it is still part of the test.
