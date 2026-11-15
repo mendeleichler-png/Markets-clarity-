@@ -29,8 +29,8 @@ All times America/New_York. This page is updated at every stage change.
 
 ## Stage checklist
 
-- [ ] **Setup** — BLOCKED on disk space (details below; everything else
-      in setup is done — framework, crew code, tools, assets all ready)
+- [ ] **Setup** — UNBLOCKED 15:40 EST (owner freed ~10 GB); model
+      download resumed 15:47 EST and is in progress; smoke test pending
 - [ ] **Research** — pending
 - [ ] **Script** — pending
 - [ ] **Reviews** — pending (10-pass protocol; fact pass and clarity pass run
@@ -83,3 +83,23 @@ All times America/New_York. This page is updated at every stage change.
   Kokoro voice and QA gates in place. **To unblock: free ~3 GB anywhere
   in the home directory (owner's call what goes), and the lane resumes
   the download and runs the build with no other changes.**
+- **2026-11-15 ~15:35 EST** — Owner approved cleanup; ~10 GB freed
+  (home 118 GB → ~108 GB). Writes verified healthy again. Setup is
+  UNBLOCKED.
+- **2026-11-15 15:40 EST** — A self-retrying pull loop (10 attempts)
+  was started against the running Ollama server. Attempts 1–6 failed
+  on the manifest fetch alone: 60-second "context deadline exceeded"
+  through the throttled egress proxy. Verified by direct probe that
+  the registry itself answers in ~1.2 s — the timeouts are
+  intermittent proxy behaviour, not a dead registry, and the loop
+  absorbs them.
+- **2026-11-15 15:43 EST** — Lane handed to a new coordinator to carry
+  it through the build.
+- **2026-11-15 15:47 EST** — A manifest fetch succeeded and the blob
+  download RESUMED in 16 parts from the on-disk partial state (server
+  log: "downloading 2bada8a74506 in 16 292 MB part(s)"). Note the
+  on-disk part trackers still show the 576 MB verified counter from
+  the afternoon's reset; parts are re-fetching over already-allocated
+  blocks, so allocated disk bytes will not grow until the download
+  passes the ~2.0 GB high-water mark. Monitoring until the model
+  registers in the server.
