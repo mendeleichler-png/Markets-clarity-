@@ -36,8 +36,8 @@ All times America/New_York. This page is updated at every stage change.
 - [x] **Script** — DONE ~16:43 EST (draft written; quality notes in
       the log)
 - [ ] **Reviews** — RUN 1 ended early (see log): fact PASS, clarity
-      FAIL (veto), hook & pace FAIL. RUN 2 (full re-run) launched
-      2026-11-15 ~18:10 EST after a service restart killed run 1
+      FAIL (veto), hook & pace FAIL. RUN 2 (full re-run): research
+      and script DONE (see log); reviews running
 - [ ] **Voice** — pending (Kokoro am_onyx @ 0.80, same as main line)
 - [ ] **Edit** — pending (FFmpeg assembly, captions, framing audit)
 - [ ] **Gates** — pending (qa_gates.py: loudness, envelope, pace, ASR match)
@@ -194,3 +194,12 @@ All times America/New_York. This page is updated at every stage change.
   produces its own sources/draft/reviews; run 1's record stays on
   file for comparison. No hand-edits to any model output in either
   run.
+- **2026-11-15 ~18:17 EST** — RUN 2 RESEARCH DONE, and it is CLEAN:
+  no $4.2M garble, no self-contradiction; UNVERIFIED holds only the
+  test-buy amount and exact years. Same pipeline, different sample —
+  run-to-run variance is itself a headline finding of this test.
+- **2026-11-15 ~18:23 EST** — RUN 2 SCRIPT DRAFT DONE: every claim
+  traces to the run-2 sources (no invented figures anywhere;
+  test-buy profit stated without an amount). ~184 spoken words —
+  over the 140–165 band; first line is expository, payoff not in
+  line 1. Both are review-pass questions now.
