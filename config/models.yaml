@@ -1,0 +1,32 @@
+# Model routing — pinned 2026-11-15. Upgrades are deliberate changes + a regression
+# run on one known script, never silent drift. (Blueprint section 3, Layer 1.)
+director:
+  role: "Orchestrator: plans, scripts, reconciles reviews, assembles the package"
+  model_class: "frontier-reasoning"
+research:
+  role: "Source gathering and synthesis into sources.md"
+  model_class: "frontier-with-web-search"
+script_draft:
+  role: "First script draft to the Script Standard"
+  model_class: "frontier"
+review_passes:
+  role: "Ten-pass protocol; rotate model families so passes do not agree with themselves"
+  model_class: "mixed-vendors"
+  veto_passes: [3, 1]   # fact precision, cold-viewer clarity
+voice:
+  engine: "kokoro-82m"
+  voice: "am_onyx"
+  speed: 0.80
+  mode: "long takes, one synthesis pass per segment; pace set at synthesis time only"
+  local_install: "~/workspace/financial-clarity/voice-tests/2026-11-15/work (venv + models + chain.py)"
+  fallback_voice: "bm_daniel @ 0.76 (only if the owner's ear rejects onyx)"
+captions_asr:
+  engine: "faster-whisper (word timestamps)"
+  role: "Kinetic captions + ASR-vs-script verification"
+graphics:
+  engine: "remotion + ffmpeg"
+  role: "Count-ups, draw-on charts, hero numbers; full-bleed; no word cards"
+broll_generation:
+  role: "OPTIONAL, stylized reenactment/B-roll only; flagged GENERATED in the shot log"
+  engines: ["higgsfield", "open video models"]
+  rule: "Never a real moment, never a real person's likeness presented as footage"

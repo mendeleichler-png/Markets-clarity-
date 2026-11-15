@@ -1,0 +1,27 @@
+# Automated gates — a build that fails any gate does not reach the owner.
+# Thresholds are the measured channel standard (playbook TS gates + 2026-11-15 proof audit).
+format:
+  width: 1080
+  height: 1920
+  duration_s: [35, 55]
+audio:
+  loudness_lufs: {target: -14.0, tolerance: 0.5}
+  true_peak_db_max: -1.0
+  envelope_p95_p50_db: [3.2, 4.9]     # dynamics present, not flat
+  speech_over_bed_db: [8, 13]
+  max_silence_s: 0.4                  # no dead air anywhere
+  hook_first_0_3s: "hot, no fade-in"
+narration:
+  pace_s_per_word_mean: [0.30, 0.36]
+  pace_variation: "present (metronome-flat is a defect)"
+  breath_group_words_max: 20
+captions:
+  asr_match_min_pct: 99
+visuals:
+  cut_interval_s: [0.7, 1.5]
+  max_static_hold_s: 2.0
+  no_clip_reused: true
+  framing_audit: "one frame pulled per shot; subject centered or designed-window"
+facts:
+  every_claim_in_sources_md: true
+  reported_labeled_reported: true

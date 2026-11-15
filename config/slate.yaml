@@ -1,0 +1,43 @@
+# Topic slate — ranked by shareability first (moment + share trigger), stayed-rate law applies.
+# States: idea | researched | scripted | reviewed | voiced | built | audited | verdict | published | measured | held
+topics:
+  - slug: leeson-barings
+    title_working: "The Trader Who Broke a 233-Year-Old Bank"
+    person: "Nick Leeson"
+    moment: "Losses hidden in error account 88888 until Barings collapsed, 1995"
+    share_trigger: "One man, one secret account, a bank older than the United States — gone"
+    state: idea
+    notes: "Proof-video candidate #1 (blueprint first deliverable). Primary sources required before scripting."
+  - slug: kerviel-socgen
+    title_working: "The Junior Trader Who Bet More Than His Bank Was Worth"
+    person: "Jerome Kerviel"
+    moment: "Secret positions beyond his limits unwound in 2008; billions lost"
+    share_trigger: "A junior employee secretly became the bank's biggest bet"
+    state: idea
+    notes: "Proof-video candidate #2. Primary sources required before scripting."
+  - slug: ltcm-1998
+    title_working: "The Nobel Winners Who Nearly Broke the World"
+    person: "Long-Term Capital Management"
+    moment: "1998: the smartest fund in the world needed a bailout to avoid systemic collapse"
+    share_trigger: "Two Nobel laureates, one model, near-meltdown"
+    state: idea
+    notes: "Research-only approval (HQ board). Primary sources required."
+  - slug: mortgage-flip
+    title_working: "held"
+    state: held
+    notes: "Script exists (10-pass revised); fact error caught pre-build. Do not build without owner word."
+  - slug: casino-toll-booth
+    title_working: "held"
+    state: held
+    notes: "Script exists (10-pass revised, 5 fact corrections). Do not build without owner word."
+  - slug: penny-funeral
+    title_working: "held"
+    state: held
+    notes: "Script exists (10-pass reviewed); never built. Do not build without owner word."
+published_recent:
+  - {slug: apple-800, youtube: "https://youtube.com/shorts/aO5o26nOUlU"}
+  - {slug: bitcoin-pizza, youtube: "https://youtube.com/shorts/W-0R7aNgaVE"}
+  - {slug: fedex-blackjack, youtube: "https://youtube.com/shorts/-jZ9ICmTIyU"}
+  - {slug: landfill-fortune, youtube: "https://youtube.com/shorts/MC5a7l_awdo"}
+  - {slug: blockbuster-netflix, youtube: "https://youtube.com/shorts/-Hb5f0l-2x4"}
+  - {slug: buffett-bet, youtube: "https://youtube.com/shorts/ctURiG4WWvI"}
