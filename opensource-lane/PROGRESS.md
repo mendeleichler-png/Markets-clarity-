@@ -35,8 +35,8 @@ All times America/New_York. This page is updated at every stage change.
       notes in the log)
 - [x] **Script** — DONE ~16:43 EST (draft written; quality notes in
       the log)
-- [ ] **Reviews** — in progress (fact pass DONE: PASS — see log;
-      clarity pass running)
+- [ ] **Reviews** — in progress: fact PASS, clarity FAIL (veto),
+      hook & pace FAIL; story & visual running
 - [ ] **Voice** — pending (Kokoro am_onyx @ 0.80, same as main line)
 - [ ] **Edit** — pending (FFmpeg assembly, captions, framing audit)
 - [ ] **Gates** — pending (qa_gates.py: loudness, envelope, pace, ASR match)
@@ -160,3 +160,22 @@ All times America/New_York. This page is updated at every stage change.
   sources line itself, so the poisoned fact survived the one pass
   designed to kill it. Recorded, not repaired: whether the later
   passes or the reconciler catch it is still part of the test.
+- **2026-11-15 ~17:06 EST** — CLARITY PASS DONE: **VERDICT: FAIL —
+  the second veto fired.** Its reasoning is muddled (scrambled line
+  numbers, "they" flagged where the names are in the same sentence),
+  but a FAIL from a veto-holder obliges the Reconciler to resolve
+  it. Its suggested rewrites keep the $4.2M line untouched (not its
+  lens).
+- **2026-11-15 ~17:01 EST** — INTERVENTION (infrastructure, no
+  action needed): the llama-server runner was SIGKILLed (OOM — the
+  box has ~8 GB RAM and the model holds ~5.5 GB). Ollama restarted
+  the runner automatically within a second and the crew carried on;
+  the in-flight generation restarted from scratch, which is part of
+  why the next pass ran long.
+- **2026-11-15 ~17:47 EST** — HOOK & PACE PASS DONE: **VERDICT:
+  FAIL.** This one judged well: the opening line is "neutral," no
+  immediate payoff — its rewrite pushes "$26 million… breaking no
+  rules" into line 1. The pass took ~45 minutes wall-clock: two
+  full 1,100-token generations at the measured ~1.6 tokens/second
+  on this shared box, plus the OOM restart. Generation speed is the
+  lane's real cost driver.
