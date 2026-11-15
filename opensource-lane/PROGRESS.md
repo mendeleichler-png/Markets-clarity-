@@ -35,9 +35,10 @@ All times America/New_York. This page is updated at every stage change.
       notes in the log)
 - [x] **Script** — DONE ~16:43 EST (draft written; quality notes in
       the log)
-- [ ] **Reviews** — RUN 1 ended early (see log): fact PASS, clarity
-      FAIL (veto), hook & pace FAIL. RUN 2 (full re-run): research
-      and script DONE (see log); reviews running
+- [ ] **Reviews** — RUN 2: fact PASS (legit this time), clarity
+      FAIL (veto, weak grounds again); hook & pace running. RUN 1
+      record: fact PASS (missed a planted error), clarity FAIL,
+      hook & pace FAIL
 - [ ] **Voice** — pending (Kokoro am_onyx @ 0.80, same as main line)
 - [ ] **Edit** — pending (FFmpeg assembly, captions, framing audit)
 - [ ] **Gates** — pending (qa_gates.py: loudness, envelope, pace, ASR match)
@@ -203,3 +204,13 @@ All times America/New_York. This page is updated at every stage change.
   test-buy profit stated without an amount). ~184 spoken words —
   over the 140–165 band; first line is expository, payoff not in
   line 1. Both are review-pass questions now.
+- **2026-11-15 ~18:31 EST** — RUN 2 FACT PASS: **VERDICT: PASS** —
+  legitimate this time (the draft has no unsupported figures; the
+  reviewer's findings are wording pedantry only).
+- **2026-11-15 ~18:37 EST** — RUN 2 CLARITY PASS: **VERDICT: FAIL**
+  — the veto fired on invented grounds AGAIN (it claims the
+  Selbees' names are "not yet spoken" in the line that speaks
+  them; its rewrite just reorders the same words). Cross-run
+  pattern: the clarity reviewer is a false-positive veto. The
+  Reconciler's instructions cover exactly this — rebut it in the
+  reconcile log or fix it; watching which.
