@@ -35,8 +35,9 @@ All times America/New_York. This page is updated at every stage change.
       notes in the log)
 - [x] **Script** — DONE ~16:43 EST (draft written; quality notes in
       the log)
-- [ ] **Reviews** — in progress: fact PASS, clarity FAIL (veto),
-      hook & pace FAIL; story & visual running
+- [ ] **Reviews** — RUN 1 ended early (see log): fact PASS, clarity
+      FAIL (veto), hook & pace FAIL. RUN 2 (full re-run) launched
+      2026-11-15 ~18:10 EST after a service restart killed run 1
 - [ ] **Voice** — pending (Kokoro am_onyx @ 0.80, same as main line)
 - [ ] **Edit** — pending (FFmpeg assembly, captions, framing audit)
 - [ ] **Gates** — pending (qa_gates.py: loudness, envelope, pace, ASR match)
@@ -179,3 +180,17 @@ All times America/New_York. This page is updated at every stage change.
   full 1,100-token generations at the measured ~1.6 tokens/second
   on this shared box, plus the OOM restart. Generation speed is the
   lane's real cost driver.
+- **2026-11-15 ~17:53 EST** — INTERVENTION (infrastructure): SECOND
+  OOM runner kill; Ollama auto-restarted it again and the crew
+  retried the story & visual generation.
+- **2026-11-15 ~18:05 EST** — RUN 1 KILLED by a platform service
+  restart (the same event killed the coordinator's own shell): the
+  crew process and the Ollama server both died mid story-&-visual
+  pass. All run-1 outputs were on disk and are preserved verbatim in
+  `videos/selbee-lottery/run1/` (sources, draft, 3 reviews).
+- **2026-11-15 ~18:10 EST** — RUN 2 LAUNCHED: server restarted with
+  the same env (model intact), then the full crew re-run from the
+  top, exactly as designed (log `logs/crew-run-2.log`). Run 2
+  produces its own sources/draft/reviews; run 1's record stays on
+  file for comparison. No hand-edits to any model output in either
+  run.
