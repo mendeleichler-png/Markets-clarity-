@@ -31,8 +31,9 @@ All times America/New_York. This page is updated at every stage change.
 
 - [x] **Setup** — DONE 16:19 EST: model pulled, `mc-qwen` created,
       smoke test passed
-- [ ] **Research** — in progress (crew launched 16:2x EST)
-- [ ] **Script** — pending
+- [x] **Research** — DONE ~16:35 EST (sources.md written; quality
+      notes in the log)
+- [ ] **Script** — in progress
 - [ ] **Reviews** — pending (10-pass protocol; fact pass and clarity pass run
       as separate veto-holding steps)
 - [ ] **Voice** — pending (Kokoro am_onyx @ 0.80, same as main line)
@@ -121,3 +122,26 @@ All times America/New_York. This page is updated at every stage change.
   football player) — which is exactly why this crew design forbids
   relying on model memory: the Researcher must verify every fact
   from the web and the fact pass holds a veto. **Setup stage DONE.**
+- **2026-11-15 ~16:22 EST** — Crew launched (CrewAI, sequential,
+  local mc-qwen only). Research ran first: web searches + page
+  fetches including the Massachusetts IG coverage.
+- **2026-11-15 ~16:35 EST** — RESEARCH DONE. sources.md verdict,
+  honestly: the headline facts check out against CBS 60 Minutes
+  ($26M gross, $7.75M profit, ~9 years, MI + MA, IG found no
+  rule-breaking). But the file also (a) lists those same two money
+  figures under UNVERIFIED, contradicting itself, (b) garbles the
+  "first test buy" line into "$4.2 million a year" (Boston Globe),
+  which is not a real figure from the story, and (c) leaves the
+  roll-down cap UNVERIFIED (so per the rules it must be cut from the
+  script). Whether the script + veto passes catch (b) is part of
+  the test — it is NOT being fixed by hand.
+- **2026-11-15 ~16:38 EST** — INTERVENTION (infrastructure): this
+  CrewAI version writes output_file paths relative to the process
+  cwd even when given an absolute path — sources.md landed in a
+  nested mirror tree under the lane folder instead of the package
+  folder. Left alone, every later deliverable would land there too,
+  and the Producer's reader (which uses the true absolute path for
+  script.md) would have failed. Fix: copied sources.md verbatim to
+  the real package folder and replaced the nested `home` directory
+  with a symlink to /home, so all subsequent crew outputs resolve
+  to their real locations. No content was altered.
