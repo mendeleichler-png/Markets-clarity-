@@ -35,10 +35,11 @@ All times America/New_York. This page is updated at every stage change.
       notes in the log)
 - [x] **Script** — DONE ~16:43 EST (draft written; quality notes in
       the log)
-- [ ] **Reviews** — RUN 2: fact PASS, clarity FAIL (veto, weak
-      grounds), hook & pace PASS (weak review), story & visual
-      PASS; taste & language running. RUN 1 record: fact PASS
-      (missed a planted error), clarity FAIL, hook & pace FAIL
+- [ ] **Reviews** — RUN 2 completed all five (fact PASS, clarity
+      FAIL veto, hook & pace PASS, story & visual PASS, taste
+      FAIL) then DIED at the Reconciler (see log). RUN 3 launched
+      2026-11-15 ~20:02 EST with ~5.7 GB free. RUN 1 record: fact
+      PASS (missed a planted error), clarity FAIL, hook & pace FAIL
 - [ ] **Voice** — pending (Kokoro am_onyx @ 0.80, same as main line)
 - [ ] **Edit** — pending (FFmpeg assembly, captions, framing audit)
 - [ ] **Gates** — pending (qa_gates.py: loudness, envelope, pace, ASR match)
@@ -228,3 +229,24 @@ All times America/New_York. This page is updated at every stage change.
   runner kills mid-generation (auto-restart + crew retry each
   time; the runner has now been killed ~5 times across the day —
   memory on this ~8 GB box is the lane's chronic hazard).
+- **2026-11-15 ~19:08 EST** — RUN 2 TASTE & LANGUAGE PASS:
+  **VERDICT: FAIL** — cosmetic synonym notes, but its hostile
+  pre-mortem lands (generic ending, weak emotional connection).
+  ALARM: its line-8 rewrite AGAIN corrupts the tax fact ("kept
+  $7.75 million AFTER taxes") — the second reviewer to propose
+  exactly that corruption of a verified figure.
+- **2026-11-15 ~20:00 EST** — **RUN 2 DIED AT THE RECONCILER.**
+  The reconciler's ~4,570-token prompt + long generation is the
+  most memory-exposed stage: three attempts were killed
+  mid-generation by OOM runner deaths (885, 213, and 306 tokens
+  in; nine runner kills logged across the day), the API returned
+  500 "unexpected EOF" each time, and CrewAI exhausted the call's
+  retries — kickoff raised `openai.InternalServerError` and the
+  process exited (traceback: `logs/crew-run-2.log`). All run-2
+  outputs are preserved in `videos/selbee-lottery/run2/`. This is
+  an infrastructure kill, not a model failure: the model completed
+  7 of 10 stages. Memory has since freed to ~5.7 GB available.
+- **2026-11-15 ~20:02 EST** — RUN 3 LAUNCHED (full re-run, log
+  `logs/crew-run-3.log`) on the improved memory conditions. If run
+  3 also dies at the reconciler, the lane gets reported as
+  blocked at that stage with this evidence trail.
