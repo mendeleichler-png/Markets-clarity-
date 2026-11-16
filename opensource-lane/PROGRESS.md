@@ -35,10 +35,10 @@ All times America/New_York. This page is updated at every stage change.
       notes in the log)
 - [x] **Script** — DONE ~16:43 EST (draft written; quality notes in
       the log)
-- [ ] **Reviews** — RUN 2: fact PASS (legit this time), clarity
-      FAIL (veto, weak grounds again); hook & pace running. RUN 1
-      record: fact PASS (missed a planted error), clarity FAIL,
-      hook & pace FAIL
+- [ ] **Reviews** — RUN 2: fact PASS, clarity FAIL (veto, weak
+      grounds), hook & pace PASS (weak review), story & visual
+      PASS; taste & language running. RUN 1 record: fact PASS
+      (missed a planted error), clarity FAIL, hook & pace FAIL
 - [ ] **Voice** — pending (Kokoro am_onyx @ 0.80, same as main line)
 - [ ] **Edit** — pending (FFmpeg assembly, captions, framing audit)
 - [ ] **Gates** — pending (qa_gates.py: loudness, envelope, pace, ASR match)
@@ -214,3 +214,17 @@ All times America/New_York. This page is updated at every stage change.
   pattern: the clarity reviewer is a false-positive veto. The
   Reconciler's instructions cover exactly this — rebut it in the
   reconcile log or fix it; watching which.
+- **2026-11-15 ~18:46 EST** — RUN 2 HOOK & PACE PASS: **VERDICT:
+  PASS** — a weak review (generic "more engaging" notes; missed
+  the missing line-1 payoff and the over-length draft entirely).
+  One of its rewrites would corrupt a fact ("$7.75 million AFTER
+  taxes" — the figure is before taxes); the Reconciler must not
+  adopt it. Run 1's sharp FAIL vs run 2's soft PASS on the same
+  weakness: variance again.
+- **2026-11-15 ~19:00 EST** — RUN 2 STORY & VISUAL PASS:
+  **VERDICT: PASS** — usable visual notes (Selbees frame 0,
+  records/chart for the proof, document for the verdict), mostly
+  matching the fixed asset plan. The pass survived two more OOM
+  runner kills mid-generation (auto-restart + crew retry each
+  time; the runner has now been killed ~5 times across the day —
+  memory on this ~8 GB box is the lane's chronic hazard).
