@@ -35,10 +35,11 @@ All times America/New_York. This page is updated at every stage change.
       notes in the log)
 - [x] **Script** — DONE ~16:43 EST (draft written; quality notes in
       the log)
-- [ ] **Reviews** — RUN 4 in progress: fact FAIL (false-positive
-      veto), clarity PASS, hook & pace NO VERDICT (truncated at
-      the token cap), story & visual PASS; taste running. RUN 2
-      completed all five then DIED at the Reconciler (see log)
+- [ ] **Reviews** — RUN 4 completed all five (fact FAIL
+      false-positive veto, clarity PASS, hook & pace NO VERDICT
+      truncated, story & visual PASS, taste FAIL), then died at
+      the Reconciler (restart #3). RESUME CREW launched from
+      run 4's genuine outputs for the final 3 stages (see log)
 - [ ] **Voice** — pending (Kokoro am_onyx @ 0.80, same as main line)
 - [ ] **Edit** — pending (FFmpeg assembly, captions, framing audit)
 - [ ] **Gates** — pending (qa_gates.py: loudness, envelope, pace, ASR match)
@@ -262,6 +263,26 @@ All times America/New_York. This page is updated at every stage change.
   UNVERIFIED line listing the states as both confirmed and
   unverified. SCRIPT DONE ~21:21 EST: factually clean, ~95
   spoken words (under the 140–165 band), thin structure.
+- **2026-11-15 ~21:49 EST** — RUN 4 TASTE PASS: **VERDICT:
+  FAIL** (no fact corruption proposed this time). All five
+  run-4 reviews complete.
+- **2026-11-15 ~21:55 EST** — RUN 4 KILLED at the Reconciler by
+  service restart #3 (restarts at ~18:05, ~20:00, ~20:58 EST —
+  the interval shrank to ~1 hour). Four full runs, four
+  infrastructure deaths; every individual stage has completed
+  at least once, but no single process survives the ~2 hours a
+  full run needs on this box.
+- **2026-11-15 ~22:05 EST** — INTERVENTION (infrastructure,
+  declared openly): a RESUME crew (`src/resume_crew.py`) now
+  runs ONLY the three remaining stages — Reconciler, Producer,
+  Packager — using crew.py's own agents/tasks/prompts/model
+  unchanged, with the completed tasks seeded by run 4's genuine
+  outputs read verbatim from the files the crew wrote (all
+  preserved in `videos/selbee-lottery/run4/`). No content is
+  hand-written or hand-edited; the local model still does every
+  remaining step. If the owner judges only an uninterrupted
+  single-process run valid, runs 1–4 stand as the evidence that
+  this box cannot host one — the model was never the blocker.
 - **2026-11-15 ~21:26 EST** — RUN 4 FACT PASS: **VERDICT: FAIL**
   — another false-positive veto: every line checks out against
   the sources, but it failed the draft over UNVERIFIED items the
