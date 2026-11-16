@@ -35,11 +35,10 @@ All times America/New_York. This page is updated at every stage change.
       notes in the log)
 - [x] **Script** — DONE ~16:43 EST (draft written; quality notes in
       the log)
-- [ ] **Reviews** — RUN 2 completed all five (fact PASS, clarity
-      FAIL veto, hook & pace PASS, story & visual PASS, taste
-      FAIL) then DIED at the Reconciler (see log). RUN 3 launched
-      2026-11-15 ~20:02 EST with ~5.7 GB free. RUN 1 record: fact
-      PASS (missed a planted error), clarity FAIL, hook & pace FAIL
+- [ ] **Reviews** — RUN 4 in progress: fact FAIL (false-positive
+      veto), clarity PASS, hook & pace NO VERDICT (truncated at
+      the token cap), story & visual PASS; taste running. RUN 2
+      completed all five then DIED at the Reconciler (see log)
 - [ ] **Voice** — pending (Kokoro am_onyx @ 0.80, same as main line)
 - [ ] **Edit** — pending (FFmpeg assembly, captions, framing audit)
 - [ ] **Gates** — pending (qa_gates.py: loudness, envelope, pace, ASR match)
@@ -257,3 +256,18 @@ All times America/New_York. This page is updated at every stage change.
   `logs/crew-run-4.log`). The pipeline's clean stages took ~62
   minutes in run 2, so a kill-free run can fit inside one
   restart window; the reconciler remains the risk.
+- **2026-11-15 ~21:17 EST** — RUN 4 RESEARCH DONE: core figures
+  clean; adds a "$5 million Michigan cap" claim as verified
+  (consistent with contemporary reporting) and one muddled
+  UNVERIFIED line listing the states as both confirmed and
+  unverified. SCRIPT DONE ~21:21 EST: factually clean, ~95
+  spoken words (under the 140–165 band), thin structure.
+- **2026-11-15 ~21:26 EST** — RUN 4 FACT PASS: **VERDICT: FAIL**
+  — another false-positive veto: every line checks out against
+  the sources, but it failed the draft over UNVERIFIED items the
+  draft never claims. CLARITY: **PASS** (first clarity pass in
+  three runs, same nitpicks). HOOK & PACE: **no verdict** — the
+  review burned its 1,100-token cap on per-line rewrites and was
+  cut off mid-sentence; its lead rewrite is genuinely good
+  ("stumbled upon a $26 million lottery loophole"). STORY &
+  VISUAL: **PASS**.
