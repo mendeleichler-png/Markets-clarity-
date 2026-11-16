@@ -247,6 +247,13 @@ All times America/New_York. This page is updated at every stage change.
   an infrastructure kill, not a model failure: the model completed
   7 of 10 stages. Memory has since freed to ~5.7 GB available.
 - **2026-11-15 ~20:02 EST** — RUN 3 LAUNCHED (full re-run, log
-  `logs/crew-run-3.log`) on the improved memory conditions. If run
-  3 also dies at the reconciler, the lane gets reported as
-  blocked at that stage with this evidence trail.
+  `logs/crew-run-3.log`) on the improved memory conditions.
+- **2026-11-15 ~20:58 EST** — RUN 3 KILLED by a second platform
+  service restart ~55 minutes in, before research completed; it
+  produced nothing (run-2 files untouched). The restarts are
+  recurring roughly every ~2 hours and kill every background
+  process on this box. Server restarted again by hand.
+- **2026-11-15 ~21:02 EST** — RUN 4 LAUNCHED (log
+  `logs/crew-run-4.log`). The pipeline's clean stages took ~62
+  minutes in run 2, so a kill-free run can fit inside one
+  restart window; the reconciler remains the risk.
